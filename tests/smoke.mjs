@@ -6,7 +6,7 @@ const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const page = await browser.newPage({ viewport: { width: 960, height: 576 } });
 const errors = [];
 page.on('pageerror', (e) => errors.push(String(e)));
-await page.goto('http://localhost:5200/');
+await page.goto(process.argv[2] ?? 'http://localhost:5200/');
 await page.waitForTimeout(500);
 const st = () => page.evaluate(() => ({ s: window.__game.state, x: window.__game.world?.player.x ?? -1, d: window.__game.world?.deaths ?? 0, w: window.__game.world?.state }));
 await page.keyboard.press('Enter'); // NEW PERFORMANCE
