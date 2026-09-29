@@ -1,0 +1,25 @@
+{
+  "name": "break-a-leg",
+  "private": true,
+  "version": "1.0.0",
+  "description": "BREAK A LEG - a small theatrical troll platformer",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "sim": "tsx tests/sim.ts",
+    "probe": "tsx tests/probe.ts",
+    "fullrun": "node tests/fullrun.mjs",
+    "smoke": "node tests/smoke.mjs",
+    "shots": "node tests/shots.mjs",
+    "moments": "node tests/moments.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.1"
+  }
+}
